@@ -23,7 +23,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <div className="d-flex h-100 text-center text-white bg-dark body">
-          <div className="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+          <div className="cover-container d-flex w-100 h-100 flex-column">
             <Header/>
             <Switch>
               <Route exact path="/" component={Main} />

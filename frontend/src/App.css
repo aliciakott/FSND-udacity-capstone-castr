@@ -1,12 +1,13 @@
 .App {
   text-align: center;
+  padding: 0px;
 }
 
-.body {
-  /* background-image: url('pexels-joseph-redfield-1870438.jpg');
+/* .body {
+  background-image: url('../public/pexels-joseph-redfield-1870438.jpg');
   background-size: cover;
-  background-position: center; */
-}
+  background-position: center;
+} */
 /* .cover-container {
   max-width: 42em;
 } */
