@@ -18,7 +18,7 @@ class MoviesView extends React.Component {
     const token = await getAccessTokenSilently();
 
     $.ajax({
-      url: 'http://localhost:5000/movies',
+      url: '/movies',
       type: "GET",
       headers: { Authorization: `Bearer ${token}`, },
       success: (result) => {
@@ -39,7 +39,7 @@ class MoviesView extends React.Component {
     const token = await getAccessTokenSilently();
 
     $.ajax({
-      url: `http://localhost:5000/movies/${id}`,
+      url: `/movies/${id}`,
       type: "DELETE",
       headers: { Authorization: `Bearer ${token}`, },
       success: (result) => {

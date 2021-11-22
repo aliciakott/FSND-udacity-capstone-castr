@@ -20,7 +20,7 @@ class EditActor extends React.Component {
     const token = await getAccessTokenSilently();
 
     $.ajax({
-      url: `http://localhost:5000/actors/${id}`,
+      url: `/actors/${id}`,
       type: "GET",
       headers: { Authorization: `Bearer ${token}`, },
       success: (result) => {
@@ -47,7 +47,7 @@ class EditActor extends React.Component {
 
 
     $.ajax({
-      url: `http://localhost:5000/actors/${id}`,
+      url: `/actors/${id}`,
       type: "PATCH",
       headers: { Authorization: `Bearer ${token}`, },
       dataType: 'json',

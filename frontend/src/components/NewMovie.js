@@ -14,7 +14,7 @@ class NewMovie extends React.Component {
     const token = await getAccessTokenSilently();
 
     $.ajax({
-      url: 'http://localhost:5000/movies',
+      url: '/movies',
       type: "POST",
       headers: { Authorization: `Bearer ${token}`, },
       dataType: 'json',

@@ -15,7 +15,7 @@ class NewActor extends React.Component {
     const token = await getAccessTokenSilently();
 
     $.ajax({
-      url: 'http://localhost:5000/actors',
+      url: '/actors',
       type: "POST",
       headers: { Authorization: `Bearer ${token}`, },
       dataType: 'json',

@@ -19,7 +19,7 @@ class EditMovie extends React.Component {
     const token = await getAccessTokenSilently();
 
     $.ajax({
-      url: `http://localhost:5000/movies/${id}`,
+      url: `/movies/${id}`,
       type: "GET",
       headers: { Authorization: `Bearer ${token}`, },
       success: (result) => {
@@ -45,7 +45,7 @@ class EditMovie extends React.Component {
 
 
     $.ajax({
-      url: `http://localhost:5000/movies/${id}`,
+      url: `/movies/${id}`,
       type: "PATCH",
       headers: { Authorization: `Bearer ${token}`, },
       dataType: 'json',
