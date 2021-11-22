@@ -2,8 +2,8 @@ import os
 from flask import Flask, request, abort, jsonify
 from flask_cors import CORS
 
-from database.models import Movie, Actor, setup_db
-from auth.auth import AuthError, requires_auth
+from .database.models import Movie, Actor, setup_db
+from .auth.auth import AuthError, requires_auth
 
 def return_all(option):
     if option == "movies":
