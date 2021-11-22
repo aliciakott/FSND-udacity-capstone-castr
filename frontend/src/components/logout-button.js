@@ -5,7 +5,7 @@ class LogoutButton extends React.Component {
     render() {
         const { logout } = this.props.auth0;
         return (
-            <h4 className="nav-link text-white" onClick={() => logout({
+            <h4 className="nav-link text-dark" onClick={() => logout({
                 returnTo: window.location.origin,
             })}>Log Out</h4>
         );

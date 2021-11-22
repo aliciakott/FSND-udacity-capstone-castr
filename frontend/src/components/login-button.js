@@ -5,7 +5,7 @@ class LoginButton extends React.Component {
     render() {
         const { loginWithRedirect } = this.props.auth0;
         return (
-            <h4 className="nav-link text-white" onClick={() => loginWithRedirect()}>
+            <h4 className="nav-link text-dark" onClick={() => loginWithRedirect()}>
                 Log In
             </h4>
         );

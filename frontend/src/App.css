@@ -11,3 +11,7 @@
 /* .cover-container {
   max-width: 42em;
 } */
+
+h3, h4 {
+  font-family: 'Open Sans', sans-serif;
+}

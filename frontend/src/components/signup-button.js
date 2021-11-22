@@ -5,7 +5,7 @@ class SignupButton extends React.Component {
     render() {
         const { loginWithRedirect } = this.props.auth0;
         return (
-            <h4 className="nav-link text-white"
+            <h4 className="nav-link text-dark"
                 onClick={() => loginWithRedirect({
                     screen_hint: "signup",})}>
                     Sign Up
