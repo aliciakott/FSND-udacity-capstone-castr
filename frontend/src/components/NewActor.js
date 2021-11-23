@@ -45,7 +45,7 @@ class NewActor extends React.Component {
 
   render() {
     return (
-      <form className="" onSubmit={this.postNewActor}>
+      <form className="m-auto" onSubmit={this.postNewActor}>
         <div className="form-group">
           <label for="actor-name">
             Name

@@ -57,20 +57,22 @@ class MoviesView extends React.Component {
 
   render() {
     return (
-      <div>
-        <div>
-        {this.state.movies.map((movie) => (
-            <Movie
-              key={movie.id}
-              id={movie.id}
-              title={movie.title}
-              release_date={movie.release_date}
-              deleteMovie={this.deleteMovie}
-            />
-          ))}
+      <div className="d-flex flex-column">
+        <div className="container">
+          <div className="row justify-content-center">
+            {this.state.movies.map((movie) => (
+              <Movie
+                key={movie.id}
+                id={movie.id}
+                title={movie.title}
+                release_date={movie.release_date}
+                deleteMovie={this.deleteMovie}
+              />
+            ))}
+          </div>
         </div>
-        <div>
-          <Link to="/add-movie"><i className="las la-plus"></i></Link>
+        <div className="mt-5">
+          <Link to="/add-movie"><i className="las la-plus text-white"></i></Link>
         </div>
       </div>
     );

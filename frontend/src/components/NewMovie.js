@@ -43,7 +43,7 @@ class NewMovie extends React.Component {
 
   render() {
     return (
-      <form className="" onSubmit={this.postNewMovie}>
+      <form className="m-auto" onSubmit={this.postNewMovie}>
         <div className="form-group">
           <label for="movie-title">
             Title

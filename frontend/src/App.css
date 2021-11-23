@@ -1,17 +1,31 @@
 .App {
   text-align: center;
   padding: 0px;
+  min-height: 100vh;
 }
 
-/* .body {
-  background-image: url('../public/pexels-joseph-redfield-1870438.jpg');
+h1 {
+  font-family: 'Lora', serif;
+}
+
+h3, h4, h6 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h6 {
+  text-shadow: 1px 0px 2px #000000;
+}
+
+i {
+  font-size: 20px;
+}
+
+main {
+  background-image: url('images/pexels-joseph-redfield-1870438.jpg');
   background-size: cover;
   background-position: center;
-} */
-/* .cover-container {
-  max-width: 42em;
-} */
-
-h3, h4 {
-  font-family: 'Open Sans', sans-serif;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
 }

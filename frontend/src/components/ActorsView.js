@@ -57,20 +57,22 @@ class ActorsView extends React.Component {
 
   render() {
     return (
-      <div>
-        <div>
-          {this.state.actors.map((actor) => (
-            <Actor
-              id={actor.id}
-              name={actor.name}
-              age={actor.age}
-              gender={actor.gender}
-              deleteActor={this.deleteActor}
-            />
-          ))}
+      <div className="d-flex flex-column">
+        <div className="container">
+          <div className="row justify-content-center">
+            {this.state.actors.map((actor) => (
+              <Actor
+                id={actor.id}
+                name={actor.name}
+                age={actor.age}
+                gender={actor.gender}
+                deleteActor={this.deleteActor}
+              />
+            ))}
+          </div>
         </div>
-        <div>
-          <Link to="/add-actor"><i className="las la-plus"></i></Link>
+        <div className="mt-5">
+          <Link to="/add-actor"><i className="las la-plus text-white"></i></Link>
         </div>
       </div>
     );
