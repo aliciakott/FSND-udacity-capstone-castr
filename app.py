@@ -27,7 +27,7 @@ def return_one_or_none(option, id):
     return result
 
 def create_app(test_config=None):
-    app = Flask(__name__, static_folder='../frontend/build', static_url_path='')
+    app = Flask(__name__, static_folder='frontend/build', static_url_path='')
     # Comment out setup_db(app) during testing!!!
     setup_db(app)
 
