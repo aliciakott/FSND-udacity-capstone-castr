@@ -1,5 +1,5 @@
 import os
-from flask import Flask, request, abort, jsonify
+from flask import Flask, request, abort, jsonify, send_from_directory
 from flask_cors import CORS
 
 from .database.models import Movie, Actor, setup_db
@@ -27,7 +27,7 @@ def return_one_or_none(option, id):
     return result
 
 def create_app(test_config=None):
-    app = Flask(__name__)
+    app = Flask(__name__, static_folder='../../frontend/build', static_url_path='')
     # comment out setup_db(app) during testing!!!
     setup_db(app)
 
@@ -44,6 +44,10 @@ def create_app(test_config=None):
 # //ENDPOINTS//
 
 # GET REQUESTS
+
+    @app.route('/')
+    def serve():
+        return send_from_directory(app.static_folder, 'index.html')
 
     @app.route('/movies')
     @requires_auth('get:movies')
