@@ -28,6 +28,7 @@ def return_one_or_none(option, id):
 
 def create_app(test_config=None):
     app = Flask(__name__)
+    # comment out setup_db(app) during testing!!!
     setup_db(app)
 
     CORS(app)
