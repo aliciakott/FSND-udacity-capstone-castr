@@ -28,13 +28,12 @@ def return_one_or_none(option, id):
 
 def create_app(test_config=None):
     app = Flask(__name__, static_folder='../../frontend/build', static_url_path='')
-    # comment out setup_db(app) during testing!!!
+    # Comment out setup_db(app) during testing!!!
     setup_db(app)
 
     CORS(app)
     @app.after_request
     def after_request(response):
-    #   response.headers.add('Access-Control-Allow-Origin', '*')
       response.headers.add('Access-Control-Allow-Headers', 'Content-Type, Authorization, true')
       response.headers.add('Access-Control-Allow-Methods', 'GET, PATCH, POST, DELETE, OPTIONS')
 

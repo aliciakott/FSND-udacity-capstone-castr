@@ -11,7 +11,7 @@ def setup_db(app, DATABASE_URL=DATABASE_URL):
     db.app = app
     db.init_app(app)
     # uncomment out db.create_all() during testing!!!
-    db.create_all()
+    # db.create_all()
 
 class Movie(db.Model):
     __tablename__ = 'movies'
