@@ -11,12 +11,7 @@ def setup_db(app, DATABASE_URL=DATABASE_URL):
     db.app = app
     db.init_app(app)
     # uncomment out db.create_all() during testing!!!
-    # db.create_all()
-
-filmography = db.Table('filmography',
-    db.Column('movie_id', db.Integer, db.ForeignKey('movies.id'), primary_key=True),
-    db.Column('actor_id', db.Integer, db.ForeignKey('actors.id'), primary_key=True)
-)
+    db.create_all()
 
 class Movie(db.Model):
     __tablename__ = 'movies'
@@ -24,7 +19,6 @@ class Movie(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(), nullable=False)
     release_date = db.Column(db.Date, nullable=False)
-    actors = db.relationship('Actor', secondary=filmography, backref=db.backref('movies', lazy=True))
 
     def __init__(self, title, release_date):
         self.title = title
