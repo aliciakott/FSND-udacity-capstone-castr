@@ -1,9 +1,9 @@
 import os
-from flask import Flask, request, abort, jsonify, send_from_directory
+from flask import Flask, request, abort, jsonify, send_from_directory, redirect
 from flask_cors import CORS
 
-from .database.models import Movie, Actor, setup_db
-from .auth.auth import AuthError, requires_auth
+from database.models import Movie, Actor, setup_db
+from auth.auth import AuthError, requires_auth
 
 def return_all(option):
     if option == "movies":
@@ -235,3 +235,5 @@ def create_app(test_config=None):
     return app
 
 app = create_app()
+if __name__=='__main__':
+    app.run()
