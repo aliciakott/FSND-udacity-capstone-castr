@@ -36,7 +36,6 @@ class NewActor extends React.Component {
   }
 
   redirect_uri = (path) => {
-    // window.location.href = window.location.origin + path;
     this.props.history.push(path);
   }
 
