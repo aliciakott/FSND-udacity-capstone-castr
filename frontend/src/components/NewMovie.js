@@ -31,7 +31,7 @@ class NewMovie extends React.Component {
         this.setState({
           post_request_sucess: true
         });
-        console.log('this.state.post_request_success');
+        console.log('status update: ' + this.state.post_request_success);
       },
       error: (error) => {
         alert('Unable to add movie to our database. Please check your permissions, or try your request again.')
