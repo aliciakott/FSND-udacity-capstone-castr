@@ -27,11 +27,10 @@ class NewMovie extends React.Component {
       }),
       success: (result) => {
         // this.redirect_uri('/movies');
-        console.log('success');
         this.setState({
           post_request_sucess: true
-        });
-        console.log('status update: ' + this.state.post_request_success);
+        })
+        return;
       },
       error: (error) => {
         alert('Unable to add movie to our database. Please check your permissions, or try your request again.')
