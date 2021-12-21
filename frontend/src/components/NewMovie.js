@@ -1,13 +1,13 @@
 import React from "react";
-import { Redirect } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import { withAuth0 } from "@auth0/auth0-react";
 import $ from 'jquery';
 
 class NewMovie extends React.Component {
   state = {
     title: "",
-    release_date: null,
-    post_request_success: false
+    release_date: null
+    // post_request_success: false
   }
 
   postNewMovie = async (event) => {
@@ -27,9 +27,11 @@ class NewMovie extends React.Component {
       }),
       success: (result) => {
         // this.redirect_uri('/movies');
-        this.setState({
-          post_request_sucess: true
-        })
+
+        // this.setState({
+        //   post_request_sucess: true
+        // })
+        props.history.push('/movies');
       },
       error: (error) => {
         alert('Unable to add movie to our database. Please check your permissions, or try your request again.')
@@ -47,9 +49,9 @@ class NewMovie extends React.Component {
   }
 
   render() {
-    if (this.state.post_request_success) {
-      return <Redirect to='/movies' />
-    }
+    // if (this.state.post_request_success) {
+    //   return <Redirect to='/movies' />
+    // }
 
     return (
       <form className="m-auto" onSubmit={this.postNewMovie}>
@@ -71,4 +73,4 @@ class NewMovie extends React.Component {
   }
 }
 
-export default withAuth0(NewMovie);
+export default withRouter(withAuth0(NewMovie));
