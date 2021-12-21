@@ -74,6 +74,7 @@ class EditMovie extends React.Component {
 
   render() {
     const { title, release_date } = this.state;
+    release_date = release_date.toLocaleString("en-CA");
 
     return (
       <form className="" onSubmit={(e) => this.updateSelectedMovie(e)}>
