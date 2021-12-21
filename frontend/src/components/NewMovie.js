@@ -27,9 +27,10 @@ class NewMovie extends React.Component {
       }),
       success: (result) => {
         // this.redirect_uri('/movies');
-        this.setState({
-          post_request_sucess: true
-        })
+        // this.setState({
+        //   post_request_sucess: true
+        // })
+        console.log('test')
         return;
       },
       error: (error) => {
