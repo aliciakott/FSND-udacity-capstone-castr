@@ -31,7 +31,7 @@ class NewMovie extends React.Component {
         // this.setState({
         //   post_request_sucess: true
         // })
-        props.history.push('/movies');
+        this.props.history.push('/movies');
       },
       error: (error) => {
         alert('Unable to add movie to our database. Please check your permissions, or try your request again.')
