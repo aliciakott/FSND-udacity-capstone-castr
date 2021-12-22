@@ -71,7 +71,7 @@ class ActorsView extends React.Component {
             ))}
           </div>
         </div>
-        <div className="mt-5">
+        <div className="my-5">
           <Link to="/add-actor"><i className="las la-plus text-white"></i></Link>
         </div>
       </div>
