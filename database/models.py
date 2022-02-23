@@ -10,7 +10,7 @@ def setup_db(app, DATABASE_URL=DATABASE_URL):
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
     db.app = app
     db.init_app(app)
-    # uncomment out db.create_all() during testing!!!
+    # UNCOMMENT OUT db.create_all() DURING TESTING ONLY!!!
     # db.create_all()
 
 class Movie(db.Model):

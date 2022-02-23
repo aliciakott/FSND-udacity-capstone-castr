@@ -28,7 +28,7 @@ def return_one_or_none(option, id):
 
 def create_app(test_config=None):
     app = Flask(__name__, static_folder='frontend/build', static_url_path='')
-    # Comment out setup_db(app) during testing!!!
+    # COMMENT OUT setup_db(app) DURING TESTING ONLY!!!
     setup_db(app)
 
     CORS(app)
