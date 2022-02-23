@@ -4,16 +4,12 @@
   min-height: 100vh;
 }
 
-h1 {
+h1, h5 {
   font-family: 'Lora', serif;
 }
 
-h3, h4, h6 {
+h3, h4, h6, p {
   font-family: 'Open Sans', sans-serif;
-}
-
-h6 {
-  text-shadow: 1px 0px 2px #000000;
 }
 
 i {
@@ -21,11 +17,14 @@ i {
 }
 
 main {
-  background-image: url('images/pexels-joseph-redfield-1870438.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   height: 100vh;
   width: 100%;
   margin: 0;
+}
+
+.empty {
+  background-image: url('images/pexels-clem-onojeghuo-375885.jpg');
+  background-size: cover;
+  background-position: top right;
+  background-repeat: no-repeat;
 }
