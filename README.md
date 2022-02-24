@@ -1,17 +1,7 @@
 # Castr
 
-## Table of Contents
-1. [Introduction](##introduction)
-1. [Getting Started](##getting-started)
-1. [API Reference](##api-reference)
-1. [Running Castr Locally](##running-castr-locally)
-1. [Testing Locally](##testing-locally)
-1. [Acknowledgements](##acknowledgements)
-
 ## Introduction
 The purpose of this project is to demonstrate proficiency in a number of skills relating to full-stack web development. These include database ORM's, RESTful API's, authorization through Auth0, and deployment through heroku.
-
-
 
 ### Dependencies
 This project runs on the following programs: Python 3, PostgreSQL (database), `psycopg2` (database adapter), `SQLAlchemy` (SQL toolkit and ORM manager), `Flask`, and the `Flask-SQLAlchemy` extension. 
@@ -56,7 +46,6 @@ Castr uses Auth0 to handle its authentication and authorization, through permiss
 This app stores tokens in browser memory, as opposed to local storage (which is not recommended). For this reason, peristence across page refreshes and browser tabs is not supported. Please see [this Auth0 page](https://auth0.com/docs/secure/security-guidance/data-security/token-storage?_ga=2.171840608.1376781327.1645584179-891335330.1645584179&_gl=1*1s6u40r*rollup_ga*ODkxMzM1MzMwLjE2NDU1ODQxNzk.*rollup_ga_F1G3E656YZ*MTY0NTU5MjQ2OC4yLjEuMTY0NTU5MjU3NC40MQ..#single-page-app-scenarios) for more information.
 
 ## API Reference
-- Organized by resource (actors/movies)
 
 #### Endpoints
 
